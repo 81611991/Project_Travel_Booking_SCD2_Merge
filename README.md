@@ -142,6 +142,8 @@ df_final_agg.write \
 - **Step 3:** If the table does not exist:
   - Overwrite table with new customer data.
 ```python
+scd_table_path = "incremental_load.default.customer_dim"
+scd_table_exists = spark._jsparkSession.catalog().tableExists(scd_table_path)
 # Check if the customers table exists
 if scd_table_exists:
     # Load the existing SCD table
