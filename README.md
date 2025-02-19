@@ -185,20 +185,18 @@ else:
   - Perform SCD2 merge in `customer_dim`.
 - **Workflow Execution:**
   - Automate process using Databricks Workflows.
+  - 
+![Alt text](snaps/create-workflow.PNG)
 
 ### **Step 3: Validate Data**
 - Check `booking_fact` table for correct aggregations.
 - Check `customer_dim` table for historical records (SCD2 merge).
 
-```python
-# Read booking data
-booking_df = spark.read.csv(booking_data, header=True, inferSchema=True, multiLine=True, quote='"')
+![Alt text](snaps/check-bookings_fact_table.PNG)
 
-# Read customer data
-customer_df = spark.read.csv(customer_data, header=True, inferSchema=True, multiLine=True, quote='"')
-```
+![Alt text](snaps/check-customer_dim_table_before_scd2.PNG)
 
----
+![Alt text](snaps/check-customer_dim_table_after_scd2.PNG)
 
 ## **How to Run the Project**
 1. Clone the repository and configure Databricks.
