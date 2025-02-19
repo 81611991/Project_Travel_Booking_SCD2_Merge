@@ -175,7 +175,7 @@ else:
 - Create folders:
   - `booking_data` (for booking CSVs)
   - `customer_data` (for customer CSVs)
-![Alt text](snaps/create-container.PNG)
+![Alt text](snaps/create-container-folders.PNG)
 
 ![Alt text](snaps/create-container-location.PNG)
 
